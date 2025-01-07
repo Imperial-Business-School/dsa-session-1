@@ -1,2 +1,3 @@
-# dsa-session-1
-Session 1 practice exercise
+# DSA Session 1
+
+Testing S1
