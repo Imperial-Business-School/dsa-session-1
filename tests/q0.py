@@ -1,11 +1,11 @@
 test = {
   'name': 'Getting started',
-  'points': 0,
+  'points': 1.0,
   'suites': [
     {
       'cases': [
         {
-          'answer': '45d71a18146dc3a2a3decfc47169a2fe',
+          'answer': 'All three are.',
           'choices': [
             'Python',
             'R',
@@ -13,7 +13,7 @@ test = {
             'All three are.'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': r"""
           Welcome to using ok in DSA! 
           
@@ -33,7 +33,7 @@ test = {
     {
       'cases': [
         {
-          'answer': '900be7e000cc181dd15a3f0033c444f9',
+          'answer': '1991',
           'choices': [
             '1867',
             '1972',
@@ -41,11 +41,11 @@ test = {
             '2016'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'Q: When was Python first released?'
         }
       ],
-      'scored': False,
+      'scored': True,
       'type': 'concept'
     }
   ]

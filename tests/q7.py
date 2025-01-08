@@ -1,6 +1,6 @@
 test = {
   'name': 'While loops',
-  'points': 0,
+  'points': 1.0,
   'suites': [
     {
       'cases': [
@@ -44,7 +44,7 @@ test = {
           'locked': True
         }
       ],
-      'scored': False,
+      'scored': True,
       'type': 'wwpp'
     }
   ]
