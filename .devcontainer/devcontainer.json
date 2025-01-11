@@ -1,0 +1,7 @@
+{
+  "name": "Python Dev Container",
+  "extensions": [
+    "ms-python.python",
+    "george-alisson.html-preview-vscode"
+  ]
+}
