@@ -14,30 +14,91 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-    - name: Install deps
+    - name: Install dependencies
       run: pip install pandas==2.1.4 jupyter==1.0.0 networkx==3.2.1
-    - name: run tests
-      run: python ok --score
-      # This is where you place your autograding tests
-      # For more information on this runner, see the documentation at: https://github.com/classroom-resources/autograding-io-grader
-      #
-      # For example, you could run a test suite like this:
-      # - name: Run tests
-      #   uses: classroom-resources/autograding-io-grader@v1
-      #     with:
-      #       test-name: Addition Test
-      #       id: addition-test
-      #       command: "./bin/add.sh"
-      #       input: 1 2
-      #       expected-output: 3
-      #       comparison-method: exact
-      #       timeout: 10
+
+    - name: Run q0
+      uses: classroom-resources/autograding-io-grader@v1
+        with:
+          test-name: Getting Started
+          id: q0test
+          command: python ok --score -q q0
+          expected-output: "Total: 1.0"
+          comparison-method: exact
+          timeout: 10
+    - name: Run q1
+      uses: classroom-resources/autograding-io-grader@v1
+        with:
+          test-name: Calculations
+          id: q1test
+          command: python ok --score -q q1
+          expected-output: "Total: 1.0"
+          comparison-method: exact
+          timeout: 10
+    - name: Run q2
+      uses: classroom-resources/autograding-io-grader@v1
+        with:
+          test-name: Variables
+          id: q2test
+          command: python ok --score -q q2
+          expected-output: "Total: 1.0"
+          comparison-method: exact
+          timeout: 10
+    - name: Run q3
+      uses: classroom-resources/autograding-io-grader@v1
+        with:
+          test-name: Strings
+          id: q3test
+          command: python ok --score -q q3
+          expected-output: "Total: 1.0"
+          comparison-method: exact
+          timeout: 10
+    - name: Run q4
+      uses: classroom-resources/autograding-io-grader@v1
+        with:
+          test-name: Objects
+          id: q4test
+          command: python ok --score -q q4
+          expected-output: "Total: 1.0"
+          comparison-method: exact
+          timeout: 10
+    - name: Run q5
+      uses: classroom-resources/autograding-io-grader@v1
+        with:
+          test-name: Getting Started
+          id: q5test
+          command: python ok --score -q q5
+          expected-output: "Total: 1.0"
+          comparison-method: exact
+          timeout: 10
+    - name: Run q6
+      uses: classroom-resources/autograding-io-grader@v1
+        with:
+          test-name: Getting Started
+          id: q6test
+          command: python ok --score -q q6
+          expected-output: "Total: 1.0"
+          comparison-method: exact
+          timeout: 10
+    - name: Run q7
+      uses: classroom-resources/autograding-io-grader@v1
+        with:
+          test-name: Getting Started
+          id: q7test
+          command: python ok --score -q q7
+          expected-output: "Total: 1.0"
+          comparison-method: exact
+          timeout: 10
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
-      # For more information on this runner, see the documentation at https://github.com/classroom-resources/autograding-grading-reporter
-      # To output the results of the tests, you can use the
-      # autograding-grading-reporter action like this:
-      # env:
-      # ADDITION-TEST_RESULTS: "${{ steps.addition - test.outputs.result }}"
-      #     with:
-      #         runners: addition-test
+      env:        
+          Q0_RESULTS: "${{steps.q0test.outputs.result}}"
+          Q1_RESULTS: "${{steps.q1test.outputs.result}}"
+          Q2_RESULTS: "${{steps.q2test.outputs.result}}"
+          Q3_RESULTS: "${{steps.q3test.outputs.result}}"
+          Q4_RESULTS: "${{steps.q4test.outputs.result}}"
+          Q5_RESULTS: "${{steps.q5test.outputs.result}}"
+          Q6_RESULTS: "${{steps.q6test.outputs.result}}"
+          Q7_RESULTS: "${{steps.q7test.outputs.result}}"
+      with:
+          runners: q0test,q1test,q2test,q3test,q4test,q5test,q6test,q7test
