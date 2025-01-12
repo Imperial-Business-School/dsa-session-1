@@ -19,9 +19,9 @@ jobs:
 
     - name: Run q0
       uses: classroom-resources/autograding-io-grader@v1
+      id: q0test
       with:
         test-name: Getting Started
-        id: q0test
         command: python ok --score -q q0
         input: ''
         expected-output: 'Total: 1.0'
@@ -30,9 +30,9 @@ jobs:
         max-score: 1
     - name: Run q1
       uses: classroom-resources/autograding-io-grader@v1
+      id: q1test
       with:
         test-name: Calculations
-        id: q1test
         command: python ok --score -q q1
         input: ''
         expected-output: 'Total: 1.0'
@@ -41,9 +41,9 @@ jobs:
         max-score: 1
     - name: Run q2
       uses: classroom-resources/autograding-io-grader@v1
+      id: q2test
       with:
         test-name: Variables
-        id: q2test
         command: python ok --score -q q2
         input: ''
         expected-output: 'Total: 1.0'
@@ -52,9 +52,9 @@ jobs:
         max-score: 1
     - name: Run q3
       uses: classroom-resources/autograding-io-grader@v1
+      id: q3test
       with:
         test-name: Strings
-        id: q3test
         command: python ok --score -q q3
         input: ''
         expected-output: 'Total: 1.0'
@@ -63,9 +63,9 @@ jobs:
         max-score: 1
     - name: Run q4
       uses: classroom-resources/autograding-io-grader@v1
+      id: q4test
       with:
         test-name: Objects
-        id: q4test
         command: python ok --score -q q4
         input: ''
         expected-output: 'Total: 1.0'
@@ -74,9 +74,9 @@ jobs:
         max-score: 1
     - name: Run q5
       uses: classroom-resources/autograding-io-grader@v1
+      id: q5test
       with:
         test-name: Getting Started
-        id: q5test
         command: python ok --score -q q5
         input: ''
         expected-output: 'Total: 1.0'
@@ -85,9 +85,9 @@ jobs:
         max-score: 1
     - name: Run q6
       uses: classroom-resources/autograding-io-grader@v1
+      id: q6test
       with:
         test-name: Getting Started
-        id: q6test
         command: python ok --score -q q6
         input: ''
         expected-output: 'Total: 1.0'
@@ -96,9 +96,9 @@ jobs:
         max-score: 1
     - name: Run q7
       uses: classroom-resources/autograding-io-grader@v1
+      id: q7test
       with:
         test-name: Getting Started
-        id: q7test
         command: python ok --score -q q7
         input: ''
         expected-output: 'Total: 1.0'
