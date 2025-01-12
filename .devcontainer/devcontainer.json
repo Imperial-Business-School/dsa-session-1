@@ -1,7 +1,16 @@
 {
   "name": "Python Dev Container",
+  "settings": {
+    "markdown.preview.security.level": "allow-insecure-local-content",
+    "files.exclude": {
+      "**/.github": true,
+      "**/.devcontainer": true,
+      ".gitignore": true,
+      "**/tests": true
+    }
+  },
   "extensions": [
     "ms-python.python",
-    "george-alisson.html-preview-vscode"
+    "searking.preview-vscode"
   ]
 }
