@@ -23,72 +23,88 @@ jobs:
         test-name: Getting Started
         id: q0test
         command: python ok --score -q q0
-        expected-output: "Total: 1.0"
-        comparison-method: exact
+        input: ''
+        expected-output: 'Total: 1.0'
+        comparison-method: contains
         timeout: 10
+        max-score: 1
     - name: Run q1
       uses: classroom-resources/autograding-io-grader@v1
       with:
         test-name: Calculations
         id: q1test
         command: python ok --score -q q1
-        expected-output: "Total: 1.0"
-        comparison-method: exact
+        input: ''
+        expected-output: 'Total: 1.0'
+        comparison-method: contains
         timeout: 10
+        max-score: 1
     - name: Run q2
       uses: classroom-resources/autograding-io-grader@v1
       with:
         test-name: Variables
         id: q2test
         command: python ok --score -q q2
-        expected-output: "Total: 1.0"
-        comparison-method: exact
+        input: ''
+        expected-output: 'Total: 1.0'
+        comparison-method: contains
         timeout: 10
+        max-score: 1
     - name: Run q3
       uses: classroom-resources/autograding-io-grader@v1
       with:
         test-name: Strings
         id: q3test
         command: python ok --score -q q3
-        expected-output: "Total: 1.0"
-        comparison-method: exact
+        input: ''
+        expected-output: 'Total: 1.0'
+        comparison-method: contains
         timeout: 10
+        max-score: 1
     - name: Run q4
       uses: classroom-resources/autograding-io-grader@v1
       with:
         test-name: Objects
         id: q4test
         command: python ok --score -q q4
-        expected-output: "Total: 1.0"
-        comparison-method: exact
+        input: ''
+        expected-output: 'Total: 1.0'
+        comparison-method: contains
         timeout: 10
+        max-score: 1
     - name: Run q5
       uses: classroom-resources/autograding-io-grader@v1
       with:
         test-name: Getting Started
         id: q5test
         command: python ok --score -q q5
-        expected-output: "Total: 1.0"
-        comparison-method: exact
+        input: ''
+        expected-output: 'Total: 1.0'
+        comparison-method: contains
         timeout: 10
+        max-score: 1
     - name: Run q6
       uses: classroom-resources/autograding-io-grader@v1
       with:
         test-name: Getting Started
         id: q6test
         command: python ok --score -q q6
-        expected-output: "Total: 1.0"
-        comparison-method: exact
+        input: ''
+        expected-output: 'Total: 1.0'
+        comparison-method: contains
         timeout: 10
+        max-score: 1
     - name: Run q7
       uses: classroom-resources/autograding-io-grader@v1
       with:
         test-name: Getting Started
         id: q7test
         command: python ok --score -q q7
-        expected-output: "Total: 1.0"
-        comparison-method: exact
+        input: ''
+        expected-output: 'Total: 1.0'
+        comparison-method: contains
         timeout: 10
+        max-score: 1
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:        
