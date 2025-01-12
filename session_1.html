@@ -7312,7 +7312,6 @@ a.anchor-link {
                     processEnvironments: true
                 },
                 displayAlign: 'center',
-                messageStyle: 'none',
                 CommonHTML: {
                     linebreaks: {
                     automatic: true
@@ -7534,8 +7533,7 @@ a.anchor-link {
 </li>
 </ul>
 <p><strong>Questions:</strong></p>
-<p><strong>Please first install Python on your laptop following the instructions in the Getting Started tutorial.</strong>
-Then read the material above and think about how you would explain to your classmates:</p>
+<p>Read the material above and think about how you would explain to your classmates:</p>
 <ul>
 <li>What different ways are there for writing and running Python code on your computer?</li>
 <li>What is the difference between <code>a = 2</code> and <code>a == 2</code> in Python?</li>
@@ -7565,53 +7563,45 @@ It is helpful to think of learning a programming language much like learning any
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Starting-out">Starting out<a class="anchor-link" href="#Starting-out">¶</a></h2><p>This session assumes that you have</p>
 <ul>
-<li>installed Python with the Anaconda distribution. If you haven't yet, you can do download the distribution <a href="https://www.anaconda.com/products/individual">here</a>. Run the file and follow the instructions to install Python.</li>
+<li>Opened the GitHub Codespace for Session 1.</li>
 </ul>
-<p>If you haven't already, you should complete these steps before starting the session.</p>
+<p>If you haven't already, you should open the Codespace before starting the session.</p>
 <p>In this session, you'll work through a series of small Python exercises.</p>
 <ul>
-<li>If you get stuck on a question, contact the course staff through the module chat.</li>
+<li>If you get stuck on a question, ask on Ed Discussion.</li>
 <li>We encourage you to chat with your colleagues and work together on the exercises.</li>
 </ul>
-<h3 id="Submission">Submission<a class="anchor-link" href="#Submission">¶</a></h3><p>There is no submission of exercises for this first session. From Session 2 onwards, you will submit some exercises for credit. In this first session:</p>
-<ul>
-<li>Questions 1-7 are the main part of the session. You should make sure you complete them before Session 2.</li>
-<li>Questions 8-10 are optional. Work on these if you finish the required questions early, or on your own time as extra practice.</li>
-</ul>
+<h3 id="Submission">Submission<a class="anchor-link" href="#Submission">¶</a></h3><p>There is no submission of exercises for this first session. From Session 2 onwards, you will submit some exercises for credit.</p>
+<h3 id="GitHub-Codespaces">GitHub Codespaces<a class="anchor-link" href="#GitHub-Codespaces">¶</a></h3><p>Codespaces are a cloud-based environment for coding, provided by a <em>version-control</em> platform called GitHub. GitHub allows us to keep different versions of our code - useful for adding new features or fixing bugs. The Codespace provides us with easy access to a prepared coding enviornment, instead of having to install software locally.</p>
+<p>A quick map of some important parts of the Codespace are in the image below:
+<img alt="GitHub Codespaces" src="./codespace.png"/></p>
 <h3 id="Using-OK">Using OK<a class="anchor-link" href="#Using-OK">¶</a></h3><p>Throughout the course, we will be using a program called <code>ok</code> test our understanding of Python and our code.</p>
-<p>The <code>ok</code> system runs on your system's <strong>command line</strong>. The command line is a text-based interface for interacting with your computer. For more detailed instructions for using the command line, see the Getting Started tutorial.</p>
-<p>To start using <code>ok</code>, open the command line application for your system, either <strong>terminal</strong> (macOS) or <strong>Anaconda Prompt</strong> (Windows). In Windows, hit the Windows key and start typing <code>Anaconda Prompt</code> to open the prompt. In macOS, use the key combination Cmd-Space, then type "terminal" and press Enter.</p>
-<p><strong>Use the command line to navigate to the directory where you have extracted the session files, including this file.</strong> You can see this directory in the browser address bar.</p>
-<p>When you open the command line, Windows shows you the directory you're in. In macOS, you can check the current directory by typing in <code>pwd</code> (for "print working directory") and hitting Enter.</p>
-<p>You can check the files contained in the directory by typing in <code>ls</code> (for "list files") in macOS or <code>dir</code> in Windows, and hitting Enter.</p>
-<p>Once you know where you are, how to navigate to a different directory? You can change the directory by typing <code>cd</code> (change directory) followed by a space and the name or path of the directory. For example, if you've checked that you're currently in <code>/Users/my_user_name</code>, and you want to move into the Desktop sub-directory <code>/Users/my_user_name/Desktop</code>, you can type in</p>
-<pre><code>cd Desktop
+<p>The <code>ok</code> system runs on the <strong>command line</strong>. The command line is a text-based interface for interacting with a computer.</p>
+<p>In a GitHub Codespace, the command-line is called a <strong>Terminal</strong> and can be found in the panel along the bottom of the Codespace.</p>
+<p>When you use the command line, you are running system commands in a specific <em>directory</em> (called a folder in Windows).In a Codespace, you begin in the root directory shown in the files and directory listing of the left panel. You can confirm this by typing in <code>ls</code> (for "list files") and hitting Enter. You will see a text-based output showing the same files and directories you can see in the left panel of the Codespace.</p>
+<p>You can get the <em>full path</em> to the current directory by typing <code>pwd</code>. You will sometimes need these details for accessing files with Python.</p>
+<p>Once you know where you are, how to navigate to a different directory? You can change the directory by typing <code>cd</code> (change directory) followed by a space and the name or path of the directory. For example, if you want to move into the <code>tests</code> sub-directory, you can type in</p>
+<pre><code>cd tests
 </code></pre>
-<p>and hit Enter. You can then check <code>pwd</code> in macOS to confirm that you moved, and <code>ls</code> (or <code>dir</code> in Windows) to check the directory contents.</p>
-<p>You can then repeat this process until you get to the desired directory. If you need to move backward to a parent directory, use <code>cd ..</code> (cd followed by a space and two dots).</p>
-<p>Alternatively, you can also move directly into the directory by entering the its full path. Say the session files are in the folder <code>ses01</code> on your system's Desktop. In macOS, type or paste into the terminal:</p>
-<pre><code>cd /Users/my_user_name/Desktop/ses01
+<p>and hit Enter. You can then check <code>pwd</code> to confirm that you moved, and <code>ls</code> to check the directory contents.</p>
+<p>You could repeat this process to travel to further sub-directories. If you need to move backward to a parent directory, use <code>cd ..</code> (cd followed by a space and two dots).</p>
+<p>Alternatively, you can also move directly into the directory by entering the its full path. Session files are by default in the folder <code>dsa-session-X</code> within the Codespace. You can access that directory like so.</p>
+<pre><code>cd /workspaces/dsa-session-1
 </code></pre>
-<p>In Windows, type into the Anaconda Prompt:</p>
-<pre><code>cd c:\Users\my_user_name\Desktop\ses01
-</code></pre>
-<p>The command line supports <strong>tab completion</strong>, which makes it easier to navigate to a folder. For example, if you're in the <code>my_user_name</code> folder and wish to move to <code>my_user_name\Desktop</code>, you can start typing <code>Des</code> and hit the <code>Tab</code> key to complete the word <code>Desktop</code>.</p>
-<p>When you get to the session directory where you extracted the files, check the contents of the directory: in macOS, use the command <code>ls</code>; in Windows, <code>dir</code>. You should see at least the following files:</p>
+<p>The command line supports <strong>tab completion</strong>, which makes it easier to navigate to a folder. For example, if you're in the <code>dsa-session-1</code> folder and wish to move to <code>tests</code>, you can start typing <code>cd te</code> and hit the <code>Tab</code> key to complete the word <code>tests</code>.</p>
+<p>When you get to the session directory, check the contents of the directory using the command <code>ls</code>. You should see at least the following files:</p>
 <pre><code>ok
 ses01.ok
 </code></pre>
-<p>In the example below, I have extracted the zip file contents to the folder C:\Users\hpeura\Documents\dsa\ses01. I then navigate to the correct folder using cd commands and check directory contents with dir, before running ok.
-If you are using macOS, your terminal will look slightly different. If in doubt, ask for help.</p>
-<p><img alt="The Spyder IDE" src="command_line_new.PNG"/></p>
 <p>Now you're ready to start the session.</p>
-<h3 id="Question-0:-OK-check">Question 0: OK-check<a class="anchor-link" href="#Question-0:-OK-check">¶</a></h3><p>Start by typing in the following command into the command line (Anaconda Prompt / Terminal):</p>
+<h3 id="Question-0:-OK-check">Question 0: OK-check<a class="anchor-link" href="#Question-0:-OK-check">¶</a></h3><p>Start by typing in the following command into the command line (Terminal):</p>
 <pre><code>python ok -q q0 -u
 </code></pre>
 <p>Make sure to type exactly the command above; otherwise you may get an error.</p>
 <p>This is to make sure that you are working in the correct folder on the command line. If you get a message saying that <code>ok</code> is not found, follow the directions above to the correct folder, or ask for help.</p>
 <p>The program will ask you a few multiple choice questions. Feel free to answer multiple times or look for solutions online.</p>
 <p>As you work through the session, we will use <code>ok</code> exercises to check what would happen when we run certain Python code.</p>
-<h3 id="Python-and-the-Spyder-IDE">Python and the Spyder IDE<a class="anchor-link" href="#Python-and-the-Spyder-IDE">¶</a></h3><p>In the Getting Started tutorial, we tried out Python on the command-line. On the command line, typing out</p>
+<h3 id="Python-and-the-VS-Code-IDE">Python and the VS Code IDE<a class="anchor-link" href="#Python-and-the-VS-Code-IDE">¶</a></h3><p>In the Getting Started tutorial, we tried out Python on the command-line. On the command line, typing out</p>
 <pre><code>python
 </code></pre>
 <p>and hitting Enter starts the Python interpreter. We can then type in commands, which the Python interpreter will evaluate.</p>
@@ -7623,15 +7613,9 @@ If you are using macOS, your terminal will look slightly different. If in doubt,
 </pre></div>
 <p>This brings you back to the normal command line.</p>
 <p>When we start building more complex programs, this mode of running code - typing it in line by line - becomes inconvenient. A better way is to store our commands in a text file, and send the entire file to the interpreter when we want to try it out. The interpreter will read the file line by line and execute the commands.</p>
-<p>These code files are often called  <em>scripts</em>. They are a convenient way to save our code for future use. We can write them using any text editor, but many programmers use editors that are part of an <em>integrated development environment</em> (IDE), which aim to make programming easier and more fun in various ways. Our Anaconda installation comes with a widely-used one called <strong>Spyder</strong>.</p>
-<p>Having installed Anaconda, you should find Spyder on your laptop. Open the Anaconda Navigator or search for Spyder directly on your computer.</p>
-<ul>
-<li>In Windows, press the Windows key and start typing <code>spyder</code>.</li>
-<li>in macOS, use Finder or Launchpad to find Spyder.</li>
-</ul>
-<p>Go ahead and open Spyder. It may take a while to load, but eventually you should see an interface like this:
-<img alt="The Spyder IDE" src="spider2.png"/></p>
-<p>The interface can look complicated at first as there are many things we can do with Spyder. Look first at the bottom right panel. This is an <strong>IPython</strong> console, which is an enhanced version of the Python interpreter we were just using on the command line.  The main visible difference to the Python interpreter is that instead of</p>
+<p>These code files are often called  <em>scripts</em>. They are a convenient way to save our code for future use. We can write them using any text editor, but many programmers use editors that are part of an <em>integrated development environment</em> (IDE), which aim to make programming easier and more fun in various ways. Our GitHub Codespace is in fact running a widely-used IDE called <strong>VS Code</strong>.</p>
+<p>You can also install VS Code (and Python) on your laptop if you wish to work offline.</p>
+<p>The interface can look complicated at first as there are many things we can do with a Codespace. Look first at the bottom right panel. This is the Python console, which is an enhanced version of the Python interpreter we were just using on the command line.  The main visible difference to the Python interpreter is that instead of</p>
 <pre><code>&gt;&gt;&gt;
 </code></pre>
 <p>it prompts you for commands with</p>
@@ -7639,7 +7623,7 @@ If you are using macOS, your terminal will look slightly different. If in doubt,
 </code></pre>
 <p>You can type in Python commands here just like in the command-line interpreter.</p>
 <p>On top of the console, there is a Help panel. It will display helpful information on your code, variables, and files, but we can ignore it for now.</p>
-<p>Often we will be working in the left panel, which is a text editor. We will use it to write and edit longer pieces of code. Different from the console, the code we type here will not run immediately. Instead, we'll have to invoke Spyder's commands to run our code or parts of it.</p>
+<p>Often we will be working in the left panel, which is a text editor. We will use it to write and edit longer pieces of code. Different from the console, the code we type here will not run immediately. Instead, we'll have to invoke the commands to run our code or parts of it.</p>
 <p><strong>We will first work in the IPython console, and later come back to the editor.</strong></p>
 </div>
 </div>
@@ -7653,16 +7637,16 @@ If you are using macOS, your terminal will look slightly different. If in doubt,
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Expressions-and-calculations">Expressions and calculations<a class="anchor-link" href="#Expressions-and-calculations">¶</a></h2><p>Computer programs consist of <em>expressions</em>, which tell the computer how to combine pieces of data. One common example are numerical expressions. For example, <code>5</code> is a simple numerical expression with just a single piece of data, and <code>2 + 3</code> is an addition expression that combines the data <code>2</code> and <code>3</code> using the <code>+</code> symbol.</p>
 <p>In Python, we can enter calculations directly into the console and it will display the answer. When we do so and write <code>2 + 3</code>, Python <em>evaluates</em> this expression, and gives us the result.</p>
-<p>Let's try this out in Spyder's console. Enter each of the following commands, one at a time. Type in or copy the command, hit return, and see what happens.</p>
+<p>Let's try this out in the console. Enter each of the following commands, one at a time. Type in or copy the command, hit return, and see what happens.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="mi">10</span> <span class="o">-</span> <span class="mi">1</span>
@@ -7670,6 +7654,18 @@ If you are using macOS, your terminal will look slightly different. If in doubt,
 <span class="mi">15</span><span class="o">/</span><span class="mi">5</span> <span class="c1"># notice that the division result is always a decimal number </span>
 <span class="mi">24</span> <span class="o">/</span> <span class="mi">3</span> <span class="c1"># The # sign indicates a comment: Python will skip the rest of the line</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[1]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>8.0</pre>
 </div>
 </div>
 </div>
@@ -7685,17 +7681,29 @@ If you are using macOS, your terminal will look slightly different. If in doubt,
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="mi">3</span><span class="o">-</span><span class="mi">8</span><span class="o">*</span><span class="mi">5</span>
 <span class="p">(</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">8</span><span class="p">)</span><span class="o">*</span><span class="mi">5</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>-25</pre>
 </div>
 </div>
 </div>
@@ -7773,22 +7781,34 @@ If you are using macOS, your terminal will look slightly different. If in doubt,
 </tr>
 </tbody>
 </table>
-<p>What would you expect the following commands do? Check your intuition with Spyder's console.</p>
+<p>What would you expect the following commands do? Check your intuition with the console.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="mi">2</span><span class="o">**</span><span class="mi">3</span>
 <span class="mi">10</span><span class="o">//</span><span class="mi">8</span>
 <span class="mi">10</span> <span class="o">%</span> <span class="mi">8</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>2</pre>
 </div>
 </div>
 </div>
@@ -7809,7 +7829,7 @@ If you are using macOS, your terminal will look slightly different. If in doubt,
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="mi">5</span><span class="o">/</span><span class="mi">0</span>
@@ -7826,12 +7846,12 @@ If you are using macOS, your terminal will look slightly different. If in doubt,
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
 <pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">ZeroDivisionError</span>                         Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-1-67a69f72677d&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span><span class="ansi-cyan-intense-fg ansi-bold">5</span><span class="ansi-yellow-intense-fg ansi-bold">/</span><span class="ansi-cyan-intense-fg ansi-bold">0</span>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ZeroDivisionError</span>                         Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[4], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-yellow-bg" style="color: rgb(98,98,98)">5</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">/</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">0</span>
 
-<span class="ansi-red-intense-fg ansi-bold">ZeroDivisionError</span>: division by zero</pre>
+<span class="ansi-red-fg">ZeroDivisionError</span>: division by zero</pre>
 </div>
 </div>
 </div>
@@ -7858,13 +7878,12 @@ If you are using macOS, your terminal will look slightly different. If in doubt,
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h3 id="Question-1-:-Calculations">Question 1 : Calculations<a class="anchor-link" href="#Question-1-:-Calculations">¶</a></h3><p>It's time for an exercise to check your understanding of the above concepts.</p>
-<p>Open Terminal (macOS) or Anaconda Prompt (Windows) and make sure you're in the directory where this file is located (where you extracted the session files, typically a folder called <code>ses01</code>). In macOS, you can type in <code>pwd</code> to check the current directory.</p>
-<p>Type in the following command:</p>
+<p>Type in the following command in the command-line terminal:</p>
 <pre><code>python ok -q q1 -u
 </code></pre>
 <p>The program will ask you a series of questions. Your task is to figure out what Python would display in each question and type in the response.</p>
 <p><strong>If the code produces an error, type in Error. If there is no output, type in Nothing.</strong></p>
-<p>If you get stuck on a question, try the code out in Spyder's IPython console. If you have questions or need help, contact the course staff.</p>
+<p>If you get stuck on a question, try the code out in the Python console. If you have questions or need help, contact the course staff.</p>
 </div>
 </div>
 </div>
@@ -7876,7 +7895,7 @@ If you are using macOS, your terminal will look slightly different. If in doubt,
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Variables-and-assignment">Variables and assignment<a class="anchor-link" href="#Variables-and-assignment">¶</a></h2><p>We have seen how to use Python for simple calculations. But these have been one-off calculations - what if we want to keep the results for later use in more complex calculations?</p>
-<p>We can do this defining variables. A variable is a name we give to a value. For example, suppose we want to calculate the area of a rectangle. Let's begin by typing the following two commands into Spyder's console.</p>
+<p>We can do this defining variables. A variable is a name we give to a value. For example, suppose we want to calculate the area of a rectangle. Let's begin by typing the following two commands into the console.</p>
 </div>
 </div>
 </div>
@@ -8146,7 +8165,7 @@ If you are using macOS, your terminal will look slightly different. If in doubt,
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">this_name_works</span> <span class="o">=</span> <span class="mi">5</span>
@@ -8164,9 +8183,9 @@ If you are using macOS, your terminal will look slightly different. If in doubt,
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
 <pre>
-<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">"&lt;ipython-input-3-e301b42ce159&gt;"</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">2</span>
+<span class="ansi-cyan-fg">  Cell </span><span class="ansi-green-fg">In[10], line 2</span>
 <span class="ansi-red-fg">    this doesnt = 4 # cannot have a space in name - use underscores instead</span>
-              ^
+         ^
 <span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
 </pre>
 </div>
@@ -8178,10 +8197,10 @@ If you are using macOS, your terminal will look slightly different. If in doubt,
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1"># if is a reserved Python keyword - Spyder will alert you if you try to use one of them</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1"># if is a reserved Python keyword - VS Code will alert you if you try to use one of them</span>
 </pre></div>
 </div>
 </div>
@@ -8195,10 +8214,10 @@ If you are using macOS, your terminal will look slightly different. If in doubt,
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
 <pre>
-<span class="ansi-cyan-intense-fg ansi-bold">  File </span><span class="ansi-green-intense-fg ansi-bold">"&lt;ipython-input-3-93d684c89bc2&gt;"</span><span class="ansi-cyan-intense-fg ansi-bold">, line </span><span class="ansi-green-intense-fg ansi-bold">1</span>
-<span class="ansi-yellow-intense-fg ansi-bold">    if = 5 # if is a reserved Python keyword - Spyder will alert you if you try to use one of them</span>
-<span class="ansi-white-intense-fg ansi-bold">       ^</span>
-<span class="ansi-red-intense-fg ansi-bold">SyntaxError</span><span class="ansi-red-intense-fg ansi-bold">:</span> invalid syntax
+<span class="ansi-cyan-fg">  Cell </span><span class="ansi-green-fg">In[9], line 1</span>
+<span class="ansi-red-fg">    if = 5 # if is a reserved Python keyword - VS Code will alert you if you try to use one of them</span>
+       ^
+<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
 </pre>
 </div>
 </div>
@@ -8211,7 +8230,7 @@ If you are using macOS, your terminal will look slightly different. If in doubt,
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Displaying-output">Displaying output<a class="anchor-link" href="#Displaying-output">¶</a></h3><p>Besides calling variables in the console, another useful way of displaying their values is using the built-in <code>print</code> function. It displays the value of the expression we place inside the following parenthesis. Try the following in Spyder's console.</p>
+<h3 id="Displaying-output">Displaying output<a class="anchor-link" href="#Displaying-output">¶</a></h3><p>Besides calling variables in the console, another useful way of displaying their values is using the built-in <code>print</code> function. It displays the value of the expression we place inside the following parenthesis. Try the following in the console.</p>
 <div class="highlight"><pre><span></span><span class="n">width</span> <span class="o">=</span> <span class="mi">7</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">width</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">width</span><span class="p">)</span>
@@ -8228,11 +8247,11 @@ If you are using macOS, your terminal will look slightly different. If in doubt,
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Question-2:-Variables">Question 2: Variables<a class="anchor-link" href="#Question-2:-Variables">¶</a></h3><p>Now check your understanding of the above concepts by typing the following command in Terminal/Anaconda Prompt:</p>
+<h3 id="Question-2:-Variables">Question 2: Variables<a class="anchor-link" href="#Question-2:-Variables">¶</a></h3><p>Now check your understanding of the above concepts by typing the following command in the command-line terminal:</p>
 <pre><code>python ok -q q2 -u
 </code></pre>
 <p><strong>If the code produces an error, write Error. If there is no output, write Nothing.</strong></p>
-<p>If you get stuck on a question, try the code out in Spyder's console. If you have questions or need help, contact the module tutors.</p>
+<p>If you get stuck on a question, try the code out in the console. If you have questions or need help, contact the module tutors.</p>
 </div>
 </div>
 </div>
@@ -8417,11 +8436,11 @@ Metamorphosis
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Question-3:-Strings">Question 3: Strings<a class="anchor-link" href="#Question-3:-Strings">¶</a></h3><p>Check your understanding of the above concepts by typing the following command in Terminal/Anaconda Prompt:</p>
+<h3 id="Question-3:-Strings">Question 3: Strings<a class="anchor-link" href="#Question-3:-Strings">¶</a></h3><p>Check your understanding of the above concepts by typing the following command on the command-line terminal:</p>
 <pre><code>python ok -q q3 -u
 </code></pre>
 <p><strong>If the code produces an error, write Error. If there is no output, write Nothing.</strong></p>
-<p>If you get stuck on a question, try the code out in Spyder's console. If you have questions or need help, contact the module tutors.</p>
+<p>If you get stuck on a question, try the code out in the console. If you have questions or need help, contact the module tutors.</p>
 <p>We will return to working with strings later on in the module.</p>
 </div>
 </div>
@@ -8544,7 +8563,7 @@ Metamorphosis
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>This is an <em>expression</em>, like <code>3+4</code>, but of a different kind: a <em>call expression</em>. A call expression applies a Python function to an argument. A function in Python is similar to a function mathematics in that it <em>maps an input argument into an output value</em>. Here, the function <code>int</code> is applied to the argument within parenthesis, <code>3.5</code>. The output value of the evaluated expression is in this case <code>3</code>, the integer part of <code>3.5</code>.</p>
-<p>The functions above are just a few of Python's many built-in functions. Here are some common functions; try them out in Spyder's console.</p>
+<p>The functions above are just a few of Python's many built-in functions. Here are some common functions; try them out in the console.</p>
 </div>
 </div>
 </div>
@@ -8657,7 +8676,7 @@ None
 <h3 id="Question-4:-Objects-and-types">Question 4: Objects and types<a class="anchor-link" href="#Question-4:-Objects-and-types">¶</a></h3><p>Check your understanding of the above concepts. Type the following command in the terminal/command line:</p>
 <pre><code>python ok -q q4 -u
 </code></pre>
-<p>If you get stuck on a question, try the code out in Spyder's console.</p>
+<p>If you get stuck on a question, try the code out in the console.</p>
 <p><strong>If the code produces an error, write Error. If there is no output, write Nothing.</strong></p>
 </div>
 </div>
@@ -8669,28 +8688,10 @@ None
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Writing-programs-in-the-Spyder-editor">Writing programs in the Spyder editor<a class="anchor-link" href="#Writing-programs-in-the-Spyder-editor">¶</a></h2><p>When writing longer programs, it is useful to type them in a text editor before running the program, rather than line-by-line into the Python console.</p>
-<p>Let us now move from the console to the Spyder text editor, on the left-hand side of the Spyder window.</p>
-<p>When we create a new file with Spyder, it comes with a prefix, something like:</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
-<span class="sd">"""</span>
-<span class="sd">Created on Tue Jun 14 15:06:38 2022</span>
-
-<span class="sd">@author: hpeura</span>
-<span class="sd">"""</span>
-</pre></div>
-</div>
+<h2 id="Writing-programs-in-the-VS-Code-editor">Writing programs in the VS Code editor<a class="anchor-link" href="#Writing-programs-in-the-VS-Code-editor">¶</a></h2><p>When writing longer programs, it is useful to type them in a text editor before running the program, rather than line-by-line into the Python console.</p>
+<p>Let us now move from the console to the VS Code text editor. First create a file named <em>kafka.py</em> using the <strong>New File</strong> button at the top of the files and directory listing in the left panel.</p>
+<p>When we create a new file for Python with VS Code, it is important we remember the <code>.py</code> suffix, or we won't be able to run our scripts.</p>
+<p><img alt="VS Code Editor" src="editor.png"/></p>
 </div>
 </div>
 </div>
@@ -8701,8 +8702,7 @@ None
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>This is a comment area that allows us to spell out what our script does, either for our own future reference or for others who will use our code. To allow these kind of comments, the Python interpreter will not run lines starting with <code>#</code> or anything between triple quotations <code>"""</code>.</p>
-<p>Write or copy the following code into the editor, below the comment.</p>
+<p>Write or copy the following code into the editor.</p>
 </div>
 </div>
 </div>
@@ -8732,12 +8732,10 @@ None
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Next, let us save the file: from the menu, select File, then Save As. Give it a name, such as <code>kafka.py</code>.</p>
-<p>After saving the file, we can run it by clicking on the green arrow in the Spyder toolbar on top of the window. You can also do this by using the keyboard shortcut <code>F5</code>, or selecting <strong>Run-&gt;Run</strong> from the menu.</p>
-<p>Run the code, and look at the IPython console. Notice that nothing appears for the first five lines of code, only the result of the <code>print()</code> statement. This is useful - when writing longer programs, it allows us to only display the information that we want to see, rather than a mass of intermediary commands and calculations.</p>
-<p>Often we do not want to run the entire script, but perhaps just a few lines. To do this, select the code you wish to run, and select <strong>Run-&gt;Selection or Current Line</strong> from the menu, or hit the <code>F9</code>-key. Try this out and see what happens in the console.</p>
-<p>A nice thing about Spyder is that it allows us to conveniently write longer programs while also letting us quickly test parts of our code in the console.</p>
-<p>We will use Spyder throughout the module to work on sessions and assignments.</p>
+<p>Files are saved automatically in the Codespace, as long as you have an active internet connection. We can now run this code by clicking on the arrow at the top-right of the editor pane.</p>
+<p>Run the code, and look at the console. Notice that nothing appears for the first five lines of code, only the result of the <code>print()</code> statement. This is useful - when writing longer programs, it allows us to only display the information that we want to see, rather than a mass of intermediary commands and calculations.</p>
+<p>A nice thing about VS Code is that it allows us to conveniently write longer programs while also letting us quickly test parts of our code in the console.</p>
+<p>We will use VS Code in the Codespace throughout the module to work on sessions and assignments.</p>
 </div>
 </div>
 </div>
@@ -8750,7 +8748,7 @@ None
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Comparisons-and-conditional-statements">Comparisons and conditional statements<a class="anchor-link" href="#Comparisons-and-conditional-statements">¶</a></h2><p>We often want to have our program do one thing if some condition is true, and another if it's false. For example, we might only want to only use data from the past year in a calculation, or only save data of tweets from people with many followers on Twitter.</p>
 <p>We do these kind of things in Python using comparisons. A comparison compares two objects, and gives a result that is always either <code>True</code> or <code>False</code>. In other words, the result is a <strong>Boolean</strong> expression. Along with integers, floats, and strings, Booleans are another type of Python object we will be using a lot.</p>
-<p>Let us try some comparisons in the Spyder console.</p>
+<p>Let us try some comparisons in the console.</p>
 </div>
 </div>
 </div>
@@ -8900,7 +8898,7 @@ None
 <h3 id="Question-5:-Comparisons">Question 5: Comparisons<a class="anchor-link" href="#Question-5:-Comparisons">¶</a></h3><p>Check your understanding of comparisons with the following command in the terminal/ command line:</p>
 <pre><code>python ok -q q5 -u
 </code></pre>
-<p>If you get stuck on a question, try the code out in Spyder's console.</p>
+<p>If you get stuck on a question, try the code out in the console.</p>
 <p><strong>If the code produces an error, write Error. If there is no output, write Nothing.</strong></p>
 <h3 id="Conditional-statements">Conditional statements<a class="anchor-link" href="#Conditional-statements">¶</a></h3><p>Why do we care about Boolean expressions? The reason is that they add a new capability to our code: we can now make <strong>choices</strong> using <em>conditional statements</em>. That is, we can tell our program to do one thing if a condition is <code>True</code> and another if it is <code>False</code>. This tremendously increases our options in building programs that can take different paths. Whenever a computer program appears to make smart decisions, there are typically conditional statements behind it.</p>
 <p>This is done using conditional <code>if</code> statements. Here is an example of an <code>if</code> statement that prints out information depending on the value of the variable <code>rainfall</code>.</p>
@@ -8966,7 +8964,7 @@ if condition:
 </code>
 <ul>
 <li> The line with the <code>if</code> statement <b>ends with a colon</b>. This is mandatory. It tells Python that the condition ends there.
-<li> The following code is <b>indented by four spaces</b>. This is also mandatory - conveniently, Spyder does it automatically for us when we press the Tab key. The indentation tells Python that all indented lines that directly follow the colon should be evaluated if the condition is <code>True</code>. We often call the group of indented lines a <i>code block</i>. 
+<li> The following code is <b>indented by four spaces</b>. This is also mandatory - conveniently, VS Code does it automatically for us when we press the Tab key. The indentation tells Python that all indented lines that directly follow the colon should be evaluated if the condition is <code>True</code>. We often call the group of indented lines a <i>code block</i>. 
 </li></li></ul>
 <p>Both of these syntax features are essential to Python, and we will run into them many times during the module.</p>
 </div>
@@ -9042,7 +9040,7 @@ if condition:
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>Notice the <code>else</code> statement again requires the <strong>colon</strong> and exactly <strong>four spaces</strong> for the following statement(s). Note also that there may be multiple lines of code that are executed given a condition, all of which need to be indented.</p>
-<p>We can also go through several cases of a condition using <code>elif</code>, short for "else if". Think about how the below code snippet would work, and check your understanding with Spyder.</p>
+<p>We can also go through several cases of a condition using <code>elif</code>, short for "else if". Think about how the below code snippet would work, and check your understanding in VS Code.</p>
 </div>
 </div>
 </div>
@@ -9138,7 +9136,7 @@ if condition:
 <h3 id="Question-6:-Conditionals">Question 6: Conditionals<a class="anchor-link" href="#Question-6:-Conditionals">¶</a></h3><p>Check your understanding of comparisons and conditionals with the following command in the terminal/ command line:</p>
 <pre><code>python ok -q q6 -u
 </code></pre>
-<p>If you get stuck on a question, try the code out in Spyder's console.</p>
+<p>If you get stuck on a question, try the code out in the console.</p>
 <p><strong>If the code produces an error, write Error. If there is no output, write Nothing.</strong></p>
 </div>
 </div>
@@ -9188,7 +9186,7 @@ if condition:
     <span class="n">etc</span><span class="o">.</span>
 </pre></div>
 <p>The while loop looks very much like an if statement. It begins with the evaluation of a <code>condition</code>. If the condition is  <code>True</code>, Python executes the loop "body" statements once. It then goes back to evaluate the <code>condition</code> a second time. Python repeats this process until the test evaluates to <code>False</code>, after which the program execution moves to the next line following the loop.</p>
-<p>The repeated code block may include one or multiple lines of code. Notice how the syntax closely resembles that of the <code>if</code> statement. We again use a colon after the condition, and indentation to distinguish the block of lines to be executed repeatedly. These should be indented by exactly four spaces (in Spyder, use the Tab key).</p>
+<p>The repeated code block may include one or multiple lines of code. Notice how the syntax closely resembles that of the <code>if</code> statement. We again use a colon after the condition, and indentation to distinguish the block of lines to be executed repeatedly. These should be indented by exactly four spaces (in VS Code, use the Tab key).</p>
 <p>Let's use this to solve calculate the squares.</p>
 </div>
 </div>
@@ -9246,11 +9244,11 @@ if condition:
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>The two indented lines of code are repeated as long as the condition <code>i &lt;= 5</code> is satisfied. As each iteration of the loop increases the value of i by one, the loop exits after five iterations, and execution moves on.</p>
-<p>The example shows three key components of while loops: initialization, condition, and incrementing. We set the initial value of <code>i</code> to 1, where we wish to start printing. We then set the condition to stop the evaluation once we hit 5. Finally, we increment the value of i within the loop so that it goes through all integers up to 5. This is important: if we omitted the increment, the loop would run infinitely as the condition would always be satisfied. If you run into this problem with your code in Spyder, use the key combination <code>Ctrl + C</code> to quit the loop execution.</p>
+<p>The example shows three key components of while loops: initialization, condition, and incrementing. We set the initial value of <code>i</code> to 1, where we wish to start printing. We then set the condition to stop the evaluation once we hit 5. Finally, we increment the value of i within the loop so that it goes through all integers up to 5. This is important: if we omitted the increment, the loop would run infinitely as the condition would always be satisfied. If you run into this problem with your code in VS Code, use the key combination <code>Ctrl + C</code> to quit the loop execution.</p>
 <h3 id="Question-7:-Loops">Question 7: Loops<a class="anchor-link" href="#Question-7:-Loops">¶</a></h3><p>Use the command</p>
 <pre><code>python ok -q q7 -u
 </code></pre>
-<p>on the command line to work through exercises on looping. If you get stuck on a question, try the code out in Spyder's console.</p>
+<p>on the command line to work through exercises on looping. If you get stuck on a question, try the code out in the console.</p>
 <p><strong>If the code produces an error, write Error. If there is no output, write Nothing.</strong></p>
 </div>
 </div>
@@ -9371,7 +9369,7 @@ if condition:
 <li><strong>Parenthesis are used for calling Python functions</strong>, such as <code>print()</code>, <strong>or grouping</strong>, as in the calculations above,</li>
 <li><strong>The hash sign <code>#</code> denotes a comment.</strong> The Python interpreter will ignore everything on a line after a hash sign.</li>
 <li><strong>Whitespace <em>within the line</em> has no effect on the execution</strong>, as we can see from the two calculations. Using spaces in formulas can be helpful to make the code readable.</li>
-<li><strong>Whitespace <em>in the beginning of the line</em> matters a lot.</strong> In one of the examples above, there was an extra space in our calculation, which caused an error with Python. Helpfully, Python calls this an <code>IndentationError</code>, so we know that the indentation was wrong. Indentation matters because Python uses it to determine which parts of the code are part of blocks such as <code>if</code> statements. We indent them by exactly four spaces, which Spyder will add when you press the <strong>Tab</strong> key. The colon sign <code>:</code> is used to denote the beginning of such an indented block.</li>
+<li><strong>Whitespace <em>in the beginning of the line</em> matters a lot.</strong> In one of the examples above, there was an extra space in our calculation, which caused an error with Python. Helpfully, Python calls this an <code>IndentationError</code>, so we know that the indentation was wrong. Indentation matters because Python uses it to determine which parts of the code are part of blocks such as <code>if</code> statements. We indent them by exactly four spaces, which VS Code will add when you press the <strong>Tab</strong> key. The colon sign <code>:</code> is used to denote the beginning of such an indented block.</li>
 </ul>
 <h2 id="Error-roundup">Error roundup<a class="anchor-link" href="#Error-roundup">¶</a></h2><p>By now, you have seen a few types of errors in code. Here are some of the more common ones:</p>
 <ul>
@@ -9391,7 +9389,7 @@ if condition:
 <li>What are variables and assignment statements?</li>
 <li>What is a Boolean expression?</li>
 <li>What are conditional statements? How do they work in Python? What are the syntax rules for them?</li>
-<li>What is the difference between working in Spyder's editor and console?</li>
+<li>What is the difference between working in the editor and console?</li>
 </ul>
 </div>
 </div>
@@ -9407,10 +9405,10 @@ if condition:
 <h3 id="Question-8:-What-would-Python-display">Question 8: What would Python display<a class="anchor-link" href="#Question-8:-What-would-Python-display">¶</a></h3><p>Check your understanding of the material with this challenge exercise. Type the following command in the terminal/command line:</p>
 <pre><code>python ok -q q8 -u
 </code></pre>
-<p>If you get stuck on a question, try the code out in Spyder's console.</p>
+<p>If you get stuck on a question, try the code out in the console.</p>
 <p>If the code produces an error, write Error. If there is no output, write Nothing.</p>
 <p><em>Note:</em> Boolean expressions can get quite wacky in Python. To understand how the more complicated examples work, search online for "python truthiness" and "python short-circuiting".</p>
-<h3 id="Question-9:-Voting-condition">Question 9: Voting condition<a class="anchor-link" href="#Question-9:-Voting-condition">¶</a></h3><p>Copy the following code into Spyder's editor, and complete it so that it works as instructed by the comment lines. <strong>Note that there are no tests for this exercise.</strong></p>
+<h3 id="Question-9:-Voting-condition">Question 9: Voting condition<a class="anchor-link" href="#Question-9:-Voting-condition">¶</a></h3><p>Copy the following code into VS Code. Complete the code it so that it works as instructed by the comment lines. <strong>Note that there are no tests for this exercise.</strong></p>
 </div>
 </div>
 </div>
@@ -9449,14 +9447,14 @@ if condition:
     <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">-</span> <span class="mi">1</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"BOOM!"</span><span class="p">)</span>
 </pre></div>
-<p>Run this in Spyder, entering different inputs to see how it works.</p>
+<p>Run this in VS Code, entering different inputs to see how it works.</p>
 <p>a. Edit the loop such that it only prints every other number. For example, the input <code>6</code> should result in the output</p>
 <div class="highlight"><pre><span></span><span class="mi">6</span> <span class="err">!</span>
 <span class="mi">4</span> <span class="err">!</span>
 <span class="mi">2</span> <span class="err">!</span>
 <span class="n">BOOM</span><span class="err">!</span>
 </pre></div>
-<p>b. Next, make a loop that instead starts from 1 and prints out BOOM! after we reach the input number. To do so, we have to initialize a variable <code>i</code> before the loop, to increment the number to be printed. Copy the following code into Spyder's editor and complete it such that it works correctly.</p>
+<p>b. Next, make a loop that instead starts from 1 and prints out BOOM! after we reach the input number. To do so, we have to initialize a variable <code>i</code> before the loop, to increment the number to be printed. Copy the following code into the editor and complete it such that it works correctly.</p>
 <div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Please enter a number."</span><span class="p">)</span>
 <span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">number</span><span class="p">)</span> <span class="c1"># the input is by default a string, so we need to convert it to integer</span>
 <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>

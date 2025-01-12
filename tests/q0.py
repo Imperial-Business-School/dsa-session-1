@@ -5,7 +5,7 @@ test = {
     {
       'cases': [
         {
-          'answer': 'All three are.',
+          'answer': '45d71a18146dc3a2a3decfc47169a2fe',
           'choices': [
             'Python',
             'R',
@@ -13,7 +13,7 @@ test = {
             'All three are.'
           ],
           'hidden': False,
-          'locked': False,
+          'locked': True,
           'question': r"""
           Welcome to using ok in DSA! 
           
@@ -33,7 +33,7 @@ test = {
     {
       'cases': [
         {
-          'answer': '1991',
+          'answer': '900be7e000cc181dd15a3f0033c444f9',
           'choices': [
             '1867',
             '1972',
@@ -41,7 +41,7 @@ test = {
             '2016'
           ],
           'hidden': False,
-          'locked': False,
+          'locked': True,
           'question': 'Q: When was Python first released?'
         }
       ],
