@@ -2,6 +2,10 @@
   "name": "Python Dev Container",
   "settings": {
     "markdown.preview.security.level": "allow-insecure-local-content",
+    "extensions.ignoreRecommendations": true,
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "git.autofetch": true,
     "files.exclude": {
       "**/.github": true,
       "**/.devcontainer": true,
