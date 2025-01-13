@@ -7,4 +7,4 @@ You can right-click this file and choose **Open Preview** to view it in
 VS Code. Or right-click and choose **Download...** to save it to your computer,
 where you can open it in your web browser.
 
-![Right-click menu preview](html.png)
+![Right-click menu preview](images/html.png)
