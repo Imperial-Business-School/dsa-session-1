@@ -74,7 +74,7 @@ jobs:
       uses: classroom-resources/autograding-io-grader@v1
       id: q5-test
       with:
-        test-name: Getting Started
+        test-name: Comparisons
         command: python ok --score -q q5
         input: ''
         expected-output: 'Total: 1.0'
@@ -85,7 +85,7 @@ jobs:
       uses: classroom-resources/autograding-io-grader@v1
       id: q6-test
       with:
-        test-name: Getting Started
+        test-name: Conditional Statements
         command: python ok --score -q q6
         input: ''
         expected-output: 'Total: 1.0'
@@ -96,7 +96,7 @@ jobs:
       uses: classroom-resources/autograding-io-grader@v1
       id: q7-test
       with:
-        test-name: Getting Started
+        test-name: While loops
         command: python ok --score -q q7
         input: ''
         expected-output: 'Total: 1.0'
