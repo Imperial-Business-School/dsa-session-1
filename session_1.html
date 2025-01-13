@@ -7574,7 +7574,7 @@ It is helpful to think of learning a programming language much like learning any
 <h3 id="Submission">Submission<a class="anchor-link" href="#Submission">¶</a></h3><p>There is no submission of exercises for this first session. From Session 2 onwards, you will submit some exercises for credit.</p>
 <h3 id="GitHub-Codespaces">GitHub Codespaces<a class="anchor-link" href="#GitHub-Codespaces">¶</a></h3><p>Codespaces are a cloud-based environment for coding, provided by a <em>version-control</em> platform called GitHub. GitHub allows us to keep different versions of our code - useful for adding new features or fixing bugs. The Codespace provides us with easy access to a prepared coding enviornment, instead of having to install software locally.</p>
 <p>A quick map of some important parts of the Codespace are in the image below:
-<img alt="GitHub Codespaces" src="./codespace.png"/></p>
+<img alt="GitHub Codespaces" src="codespace.png"/></p>
 <h3 id="Using-OK">Using OK<a class="anchor-link" href="#Using-OK">¶</a></h3><p>Throughout the course, we will be using a program called <code>ok</code> test our understanding of Python and our code.</p>
 <p>The <code>ok</code> system runs on the <strong>command line</strong>. The command line is a text-based interface for interacting with a computer.</p>
 <p>In a GitHub Codespace, the command-line is called a <strong>Terminal</strong> and can be found in the panel along the bottom of the Codespace.</p>
@@ -7585,10 +7585,10 @@ It is helpful to think of learning a programming language much like learning any
 </code></pre>
 <p>and hit Enter. You can then check <code>pwd</code> to confirm that you moved, and <code>ls</code> to check the directory contents.</p>
 <p>You could repeat this process to travel to further sub-directories. If you need to move backward to a parent directory, use <code>cd ..</code> (cd followed by a space and two dots).</p>
-<p>Alternatively, you can also move directly into the directory by entering the its full path. Session files are by default in the folder <code>dsa-session-X</code> within the Codespace. You can access that directory like so.</p>
-<pre><code>cd /workspaces/dsa-session-1
+<p>Alternatively, you can also move directly into the directory by entering the its full path. Session files are by default in the folder <code>session-X-&lt;your-username&gt;</code> within the Codespace. For example, to access the session 1 directory, I would type the following.</p>
+<pre><code>cd /workspaces/session-1-jaydesl
 </code></pre>
-<p>The command line supports <strong>tab completion</strong>, which makes it easier to navigate to a folder. For example, if you're in the <code>dsa-session-1</code> folder and wish to move to <code>tests</code>, you can start typing <code>cd te</code> and hit the <code>Tab</code> key to complete the word <code>tests</code>.</p>
+<p>The command line supports <strong>tab completion</strong>, which makes it easier to navigate to a folder. For example, if you're in the <code>workspaces</code> directory and wish to move to <code>session-1-...</code>, you can start typing <code>cd sess</code> and hit the <code>Tab</code> key to complete the word <code>session-1-...</code>.</p>
 <p>When you get to the session directory, check the contents of the directory using the command <code>ls</code>. You should see at least the following files:</p>
 <pre><code>ok
 ses01.ok
@@ -7604,27 +7604,17 @@ ses01.ok
 <h3 id="Python-and-the-VS-Code-IDE">Python and the VS Code IDE<a class="anchor-link" href="#Python-and-the-VS-Code-IDE">¶</a></h3><p>In the Getting Started tutorial, we tried out Python on the command-line. On the command line, typing out</p>
 <pre><code>python
 </code></pre>
-<p>and hitting Enter starts the Python interpreter. We can then type in commands, which the Python interpreter will evaluate.</p>
+<p>and hitting Enter gives access to the the Python interpreter via a <em>console</em>. We can then type in commands, which the Python interpreter will evaluate.</p>
 <div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="s1">'Hello!'</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span><span class="o">+</span><span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
 </pre></div>
-<p>You can leave the Python interpreter by typing</p>
+<p>You can leave the Python console by typing</p>
 <div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">quit</span><span class="p">()</span>
 </pre></div>
 <p>This brings you back to the normal command line.</p>
-<p>When we start building more complex programs, this mode of running code - typing it in line by line - becomes inconvenient. A better way is to store our commands in a text file, and send the entire file to the interpreter when we want to try it out. The interpreter will read the file line by line and execute the commands.</p>
-<p>These code files are often called  <em>scripts</em>. They are a convenient way to save our code for future use. We can write them using any text editor, but many programmers use editors that are part of an <em>integrated development environment</em> (IDE), which aim to make programming easier and more fun in various ways. Our GitHub Codespace is in fact running a widely-used IDE called <strong>VS Code</strong>.</p>
-<p>You can also install VS Code (and Python) on your laptop if you wish to work offline.</p>
-<p>The interface can look complicated at first as there are many things we can do with a Codespace. Look first at the bottom right panel. This is the Python console, which is an enhanced version of the Python interpreter we were just using on the command line.  The main visible difference to the Python interpreter is that instead of</p>
-<pre><code>&gt;&gt;&gt;
-</code></pre>
-<p>it prompts you for commands with</p>
-<pre><code>In [1]:
-</code></pre>
-<p>You can type in Python commands here just like in the command-line interpreter.</p>
-<p>On top of the console, there is a Help panel. It will display helpful information on your code, variables, and files, but we can ignore it for now.</p>
-<p>Often we will be working in the left panel, which is a text editor. We will use it to write and edit longer pieces of code. Different from the console, the code we type here will not run immediately. Instead, we'll have to invoke the commands to run our code or parts of it.</p>
-<p><strong>We will first work in the IPython console, and later come back to the editor.</strong></p>
+<p>When we start building more complex programs, this mode of running code - typing it in line by line - becomes inconvenient. A better way is to store our commands in a text file, and send the entire file to Python when we want to try it out. Python will read the file line by line and execute the commands.</p>
+<p>These code files are often called  <em>scripts</em>. They are a convenient way to save our code for future use. We can write them using any text editor, but many programmers use editors that are part of an <em>integrated development environment</em> (IDE), which aim to make programming easier and more fun in various ways. Our GitHub Codespace is in fact running a widely-used IDE called <strong>VS Code</strong>. You can learn more about these technologies in the Getting Started PDF circulated in Week 1.</p>
+<p><strong>We will first work in the console, and later come back to scripts in the editor.</strong></p>
 </div>
 </div>
 </div>
@@ -7641,31 +7631,19 @@ ses01.ok
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="mi">10</span> <span class="o">-</span> <span class="mi">1</span>
-<span class="mi">2</span><span class="o">*</span><span class="mi">3</span>
-<span class="mi">15</span><span class="o">/</span><span class="mi">5</span> <span class="c1"># notice that the division result is always a decimal number </span>
+<span class="mi">2</span> <span class="o">*</span> <span class="mi">3</span>
+<span class="mi">15</span> <span class="o">/</span> <span class="mi">5</span> <span class="c1"># notice that the division result is always a decimal number </span>
 <span class="mi">24</span> <span class="o">/</span> <span class="mi">3</span> <span class="c1"># The # sign indicates a comment: Python will skip the rest of the line</span>
 </pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[1]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>8.0</pre>
 </div>
 </div>
 </div>
@@ -7681,29 +7659,17 @@ ses01.ok
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="mi">3</span><span class="o">-</span><span class="mi">8</span><span class="o">*</span><span class="mi">5</span>
-<span class="p">(</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">8</span><span class="p">)</span><span class="o">*</span><span class="mi">5</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="mi">3</span> <span class="o">-</span> <span class="mi">8</span> <span class="o">*</span> <span class="mi">5</span>
+<span class="p">(</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">8</span><span class="p">)</span> <span class="o">*</span> <span class="mi">5</span>
 </pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>-25</pre>
 </div>
 </div>
 </div>
@@ -7785,30 +7751,18 @@ ses01.ok
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="mi">2</span><span class="o">**</span><span class="mi">3</span>
-<span class="mi">10</span><span class="o">//</span><span class="mi">8</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="mi">2</span> <span class="o">**</span> <span class="mi">3</span>
+<span class="mi">10</span> <span class="o">//</span> <span class="mi">8</span>
 <span class="mi">10</span> <span class="o">%</span> <span class="mi">8</span>
 </pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>2</pre>
 </div>
 </div>
 </div>
@@ -7829,10 +7783,10 @@ ses01.ok
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="mi">5</span><span class="o">/</span><span class="mi">0</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="mi">5</span> <span class="o">/</span> <span class="mi">0</span>
 </pre></div>
 </div>
 </div>
@@ -7848,8 +7802,8 @@ ses01.ok
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">ZeroDivisionError</span>                         Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[4], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-yellow-bg" style="color: rgb(98,98,98)">5</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">/</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">0</span>
+Cell <span class="ansi-green-fg">In[1], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-yellow-bg" style="color: rgb(98,98,98)">5</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">/</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">0</span>
 
 <span class="ansi-red-fg">ZeroDivisionError</span>: division by zero</pre>
 </div>
@@ -7904,7 +7858,7 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">width</span> <span class="o">=</span> <span class="mi">7</span>
@@ -7933,7 +7887,7 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Now let's calculate the area of the rectangle, which is the product of the width and the length. We could do this with the values <code>7*3</code>, or the variable names <code>width*length</code> .</p>
+<p>Now let's calculate the area of the rectangle, which is the product of the width and the length. We could do this with the values <code>7 * 3</code>, or the variable names <code>width * length</code> .</p>
 </div>
 </div>
 </div>
@@ -7942,10 +7896,10 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">area</span> <span class="o">=</span> <span class="n">width</span><span class="o">*</span><span class="n">length</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">area</span> <span class="o">=</span> <span class="n">width</span> <span class="o">*</span> <span class="n">length</span>
 </pre></div>
 </div>
 </div>
@@ -7958,7 +7912,7 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Here we take the values stored in the variables <code>width</code> and <code>length</code> and save the result of their multiplication to a new variable <code>area</code>. When making an assignment, the Python interpreter will first <em>evaluate</em> the expression is on the right-hand side of the equals sign (here <code>width*length</code>), and then store its value associated with the variable on the left-hand side (here <code>area</code>). Here, the expression <code>width*length</code> evaluates to 21, which will be the value of the variable <code>area</code>.</p>
+<p>Here we take the values stored in the variables <code>width</code> and <code>length</code> and save the result of their multiplication to a new variable <code>area</code>. When making an assignment, the Python interpreter will first <em>evaluate</em> the expression is on the right-hand side of the equals sign (here <code>width * length</code>), and then store its value associated with the variable on the left-hand side (here <code>area</code>). Here, the expression <code>width * length</code> evaluates to 21, which will be the value of the variable <code>area</code>.</p>
 <p>The assignment statement is always of the form:</p>
 <pre><code>variable = expression
 </code></pre>
@@ -7972,7 +7926,7 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="mi">20</span> <span class="c1"># expression: 20</span>
@@ -7988,7 +7942,7 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>50</pre>
 </div>
@@ -8011,10 +7965,10 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="p">(</span><span class="mi">50</span><span class="o">-</span><span class="mi">30</span><span class="p">)</span><span class="o">*</span><span class="mi">2</span> <span class="c1"># expression: (50-30)*2</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="p">(</span><span class="mi">50</span> <span class="o">-</span> <span class="mi">30</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span> <span class="c1"># expression: (50-30)*2</span>
 <span class="n">temp</span>
 </pre></div>
 </div>
@@ -8026,7 +7980,7 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>40</pre>
 </div>
@@ -8050,7 +8004,7 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
@@ -8067,7 +8021,7 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>8</pre>
 </div>
@@ -8081,11 +8035,11 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Here's an example <a href="http://pythontutor.com/visualize.html#code=x%20%3D%205%0Ay%20%3D%203%0Ax%20%3D%20x%20%2B%20y%0Ax&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=false&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">visualisation</a> of how this works.</p>
+<p>Here's <a href="http://pythontutor.com/visualize.html#code=x%20%3D%205%0Ay%20%3D%203%0Ax%20%3D%20x%20%2B%20y%0Ax&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=false&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">a link to an example visualisation</a> of how this works, using Python Tutor, which helps visualise the steps taken when code runs.</p>
 </div>
 </div>
 </div>
-</div>&lt;iframe width="800" height="450" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=x%20%3D%205%0Ay%20%3D%203%0Ax%20%3D%20x%20%2B%20y%0Ax&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=false&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false"&gt; &lt;/iframe&gt;
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -8102,7 +8056,7 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">height</span>
@@ -8119,12 +8073,12 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
 <pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-1-29d30993fed9&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>height
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[7], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-yellow-bg">height</span>
 
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name 'height' is not defined</pre>
+<span class="ansi-red-fg">NameError</span>: name 'height' is not defined</pre>
 </div>
 </div>
 </div>
@@ -8134,7 +8088,7 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="mi">123</span><span class="n">var</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1"># cannot start name with a number</span>
@@ -8151,10 +8105,10 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
 <pre>
-<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">"&lt;ipython-input-2-b08513b82eb8&gt;"</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">1</span>
+<span class="ansi-cyan-fg">  Cell </span><span class="ansi-green-fg">In[8], line 1</span>
 <span class="ansi-red-fg">    123var = 3 # cannot start name with a number</span>
-         ^
-<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
+      ^
+<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid decimal literal
 </pre>
 </div>
 </div>
@@ -8165,7 +8119,7 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">this_name_works</span> <span class="o">=</span> <span class="mi">5</span>
@@ -8183,7 +8137,7 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
 <pre>
-<span class="ansi-cyan-fg">  Cell </span><span class="ansi-green-fg">In[10], line 2</span>
+<span class="ansi-cyan-fg">  Cell </span><span class="ansi-green-fg">In[9], line 2</span>
 <span class="ansi-red-fg">    this doesnt = 4 # cannot have a space in name - use underscores instead</span>
          ^
 <span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
@@ -8197,7 +8151,7 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1"># if is a reserved Python keyword - VS Code will alert you if you try to use one of them</span>
@@ -8214,7 +8168,7 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
 <pre>
-<span class="ansi-cyan-fg">  Cell </span><span class="ansi-green-fg">In[9], line 1</span>
+<span class="ansi-cyan-fg">  Cell </span><span class="ansi-green-fg">In[10], line 1</span>
 <span class="ansi-red-fg">    if = 5 # if is a reserved Python keyword - VS Code will alert you if you try to use one of them</span>
        ^
 <span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
@@ -8356,7 +8310,7 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">'Kafka</span><span class="se">\'</span><span class="s1">s </span><span class="se">\n</span><span class="s1">book'</span><span class="p">)</span>
@@ -8400,7 +8354,7 @@ Kafka's book
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">"""</span>
@@ -8626,7 +8580,7 @@ Metamorphosis
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -8910,7 +8864,7 @@ None
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">rainfall</span> <span class="o">=</span> <span class="mi">2</span>
@@ -8948,7 +8902,7 @@ Bring an umbrella!
 </div>
 </div>
 </div>
-</div>&lt;iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=rainfall%20%3D%202%0Aif%20rainfall%20%3E%200.5%3A%0A%20%20%20%20print%28'It%20will%20likely%20rain%20'%20%2B%20str%28rainfall%29%20%2B%20'%20millimeters.'%29%0A%20%20%20%20print%28'Bring%20an%20umbrella!'%29&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=false&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false"&gt; &lt;/iframe&gt;
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -8982,12 +8936,12 @@ if condition:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">rainfall</span> <span class="o">=</span> <span class="mi">0</span>
@@ -8996,6 +8950,19 @@ if condition:
     <span class="nb">print</span><span class="p">(</span><span class="s1">'Bring an umbrella!'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'Done with checking the weather.'</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Done with checking the weather.
+</pre>
 </div>
 </div>
 </div>
@@ -9011,12 +8978,12 @@ if condition:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">rainfall</span> <span class="o">=</span> <span class="mi">0</span>
@@ -9028,6 +8995,21 @@ if condition:
     <span class="nb">print</span><span class="p">(</span><span class="s1">'Enjoy your day!'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'Done with checking the weather.'</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Expected rainfall is below 0.5 millimeters today.
+Enjoy your day!
+Done with checking the weather.
+</pre>
 </div>
 </div>
 </div>
@@ -9077,12 +9059,12 @@ if condition:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="mi">33</span>
@@ -9092,6 +9074,20 @@ if condition:
     <span class="k">if</span> <span class="n">humidity</span> <span class="o">&gt;</span> <span class="mi">80</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">'I</span><span class="se">\'</span><span class="s1">m out of here!'</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Too hot!
+I'm out of here!
+</pre>
 </div>
 </div>
 </div>
@@ -9108,12 +9104,12 @@ if condition:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="mi">33</span>
@@ -9122,6 +9118,20 @@ if condition:
     <span class="nb">print</span><span class="p">(</span><span class="s1">'Too hot!'</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'I</span><span class="se">\'</span><span class="s1">m out of here!'</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Too hot!
+I'm out of here!
+</pre>
 </div>
 </div>
 </div>
@@ -9196,7 +9206,7 @@ if condition:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># initialization</span>
@@ -9236,7 +9246,7 @@ if condition:
 </div>
 </div>
 </div>
-</div>&lt;iframe width="800" height="350" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=i%20%3D%201%20%23%20initialization%0Awhile%20i%20%3C%3D%205%3A%20%23%20condition%0A%20%20%20%20print%28i**2%29%0A%20%20%20%20i%20%3D%20i%20%2B%201%20%20%23%20increment&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false"&gt; &lt;/iframe&gt;
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -9270,7 +9280,7 @@ if condition:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">'Hello, again!'</span><span class="p">)</span> <span class="c1"># Displays the stuff within parentheses</span>
@@ -9301,7 +9311,7 @@ if condition:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
@@ -9319,10 +9329,10 @@ if condition:
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
 <pre>
-<span class="ansi-cyan-intense-fg ansi-bold">  File </span><span class="ansi-green-intense-fg ansi-bold">"&lt;ipython-input-15-49b8ac7e83c1&gt;"</span><span class="ansi-cyan-intense-fg ansi-bold">, line </span><span class="ansi-green-intense-fg ansi-bold">2</span>
-<span class="ansi-yellow-intense-fg ansi-bold">    print(2*x)</span>
-<span class="ansi-white-intense-fg ansi-bold">    ^</span>
-<span class="ansi-red-intense-fg ansi-bold">IndentationError</span><span class="ansi-red-intense-fg ansi-bold">:</span> unexpected indent
+<span class="ansi-cyan-fg">  Cell </span><span class="ansi-green-fg">In[21], line 2</span>
+<span class="ansi-red-fg">    print(2*x)</span>
+    ^
+<span class="ansi-red-fg">IndentationError</span><span class="ansi-red-fg">:</span> unexpected indent
 </pre>
 </div>
 </div>
@@ -9333,7 +9343,7 @@ if condition:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="mi">2</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
